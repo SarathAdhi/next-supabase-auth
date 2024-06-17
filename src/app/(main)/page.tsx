@@ -2,7 +2,6 @@ import { Badge } from "@ui/badge";
 import { Button } from "@ui/button";
 import { Code2, Component, Lock, LockKeyhole, Palette } from "lucide-react";
 import Link from "next/link";
-import React from "react";
 
 const HomePage = () => {
   return (
@@ -29,7 +28,7 @@ const HomePage = () => {
           </Button>
 
           <Button variant="outline" className="rounded-full">
-            <a href="https://github.com/Next-Level-Starter-Templates/next-supabase-auth">
+            <a href="https://github.com/SarathAdhi/next-supabase-auth">
               GitHub
             </a>
           </Button>
@@ -105,7 +104,7 @@ const HomePage = () => {
 
         <Button size="sm" asChild>
           <a
-            href="https://github.com/Next-Level-Starter-Templates/next-supabase-auth"
+            href="https://github.com/SarathAdhi/next-supabase-auth"
             target="_blank"
           >
             View on GitHub
