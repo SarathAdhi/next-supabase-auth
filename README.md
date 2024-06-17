@@ -1,6 +1,6 @@
 # Next Level UI
 
-Next.js 14 Open Source Playground: Crafting Modern Web Experiences
+Next.js 14 - @supabase/ssr
 
 ## About
 
