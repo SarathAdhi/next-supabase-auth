@@ -1,8 +1,7 @@
-import { Button } from "@ui/button";
-import { cn } from "@utils/cn";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/utils/cn";
 import { ChevronLeftCircle } from "lucide-react";
 import Link from "next/link";
-import React from "react";
 import LoginForm from "./_components/login-form";
 
 const LoginPage = () => {

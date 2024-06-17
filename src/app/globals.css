@@ -70,6 +70,9 @@
   * {
     @apply border-border;
   }
+  html {
+    @apply font-sans antialiased scroll-smooth;
+  }
   body {
     @apply min-h-screen flex flex-col bg-background text-foreground;
   }

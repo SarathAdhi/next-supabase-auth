@@ -1,8 +1,7 @@
-import { supabaseServerComponent } from "@lib/supabase-server";
-import React from "react";
+import { createClient } from "@/utils/supabase/server";
 
 const ProfilePage = async () => {
-  const supabase = supabaseServerComponent();
+  const supabase = createClient();
 
   const {
     data: { user },

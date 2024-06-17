@@ -1,8 +1,8 @@
+import { ThemeProvider } from "@/components//theme-provider";
+import { siteConfig } from "@/config//site";
+import { cn } from "@/utils/cn";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
-import { ThemeProvider } from "@components/theme-provider";
-import { cn } from "@utils/cn";
-import { siteConfig } from "@config/site";
 import { Toaster } from "react-hot-toast";
 
 import "./globals.css";
