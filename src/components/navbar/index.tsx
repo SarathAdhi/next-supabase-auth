@@ -1,11 +1,8 @@
-import React from "react";
-import { ModeToggle } from "./mode-toggle";
-import { Button } from "@ui/button";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import {
-  supabaseServerAction,
-  supabaseServerComponent,
-} from "@lib/supabase-server";
+import { ModeToggle } from "./mode-toggle";
+
+import { signOut } from "@/app/actions";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,29 +10,20 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@ui/dropdown-menu";
+} from "@/components/ui/dropdown-menu";
+import { createClient } from "@/utils/supabase/server";
 import { Lock, User } from "lucide-react";
-import { revalidatePath } from "next/cache";
 
 const Navbar = async () => {
-  const supabase = supabaseServerComponent();
+  const supabase = createClient();
 
   const {
     data: { user },
   } = await supabase.auth.getUser();
 
-  async function signOut() {
-    "use server";
-
-    const supabase = supabaseServerAction();
-    await supabase.auth.signOut();
-
-    revalidatePath("/");
-  }
-
   return (
     <header className="w-full">
-      <div className="container p-4 sm:p-6 flex items-center justify-between">
+      <div className="container p-4 sm:px-6 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Lock />
           <h5 className="mt-0.5">Next Level Auth</h5>
@@ -65,16 +53,15 @@ const Navbar = async () => {
                   <DropdownMenuSeparator />
 
                   <DropdownMenuItem className="p-0" asChild>
-                    <form action={signOut}>
-                      <Button
-                        size="sm"
-                        variant="destructive"
-                        className="rounded-sm w-full"
-                        type="submit"
-                      >
-                        Logout
-                      </Button>
-                    </form>
+                    <Button
+                      size="sm"
+                      variant="destructive"
+                      className="rounded-sm w-full"
+                      type="submit"
+                      onClick={signOut}
+                    >
+                      Logout
+                    </Button>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>

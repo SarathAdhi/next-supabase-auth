@@ -1,6 +1,8 @@
 import * as React from "react";
 
-import { cn } from "@utils/cn";
+import { cn } from "@/utils/cn";
+import { Control, FieldValues } from "react-hook-form";
+import { Input } from ".";
 import {
   FormControl,
   FormDescription,
@@ -9,8 +11,6 @@ import {
   FormLabel,
   FormMessage,
 } from "../form";
-import { Control, FieldValues } from "react-hook-form";
-import { Input } from ".";
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {

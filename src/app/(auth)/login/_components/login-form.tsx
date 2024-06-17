@@ -1,12 +1,11 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+import { Form } from "@/components/ui/form";
+import { InputForm } from "@/components/ui/input/input-form";
+import { createClient } from "@/utils/supabase/client";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
-import { Button } from "@ui/button";
-import { Form } from "@ui/form";
-import { InputForm } from "@ui/input/input-form";
 import { useRouter } from "next/navigation";
-import React from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { z } from "zod";
@@ -28,7 +27,7 @@ const defaultValues: LoginValuesType = {
 const LoginForm = () => {
   const router = useRouter();
 
-  const supabase = createClientComponentClient();
+  const supabase = createClient();
 
   const form = useForm<LoginValuesType>({
     resolver: zodResolver(loginFormSchema),
