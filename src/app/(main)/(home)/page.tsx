@@ -53,7 +53,7 @@ const HomePage = () => {
 
         <Button size="sm" asChild>
           <a
-            href="https://github.com/Next-Level-Starter-Templates/next-supabase-auth"
+            href="https://github.com/SarathAdhi/next-supabase-auth"
             target="_blank"
           >
             View on GitHub

@@ -1,6 +1,6 @@
 # Next Level Auth
 
-Next.js 14 Supabase Authentication Playground
+Next.js 14 - @supabase/ssr
 
 ## About
 
