@@ -53,15 +53,16 @@ const Navbar = async () => {
                   <DropdownMenuSeparator />
 
                   <DropdownMenuItem className="p-0" asChild>
-                    <Button
-                      size="sm"
-                      variant="destructive"
-                      className="rounded-sm w-full"
-                      type="submit"
-                      onClick={signOut}
-                    >
-                      Logout
-                    </Button>
+                    <form action={signOut}>
+                      <Button
+                        size="sm"
+                        variant="destructive"
+                        className="rounded-sm w-full"
+                        type="submit"
+                      >
+                        Logout
+                      </Button>
+                    </form>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
