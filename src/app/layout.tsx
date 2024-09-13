@@ -39,6 +39,7 @@ export const metadata: Metadata = {
     },
   ],
   creator: "Sarath Adhithya",
+  metadataBase: new URL(siteConfig.url),
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
-    images: [siteConfig.ogImage],
+    images: siteConfig.ogImage,
   },
   twitter: {
     card: "summary_large_image",
@@ -70,6 +71,7 @@ export const metadata: Metadata = {
     },
   },
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{
