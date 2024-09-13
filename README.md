@@ -1,4 +1,4 @@
-# Next Level UI
+# Next Level Auth
 
 Next.js 14 - @supabase/ssr
 
@@ -12,6 +12,8 @@ Every line of code is open source, offering a collaborative learning experience.
 
 - Nextjs 14 (latest)
 - App router
+- Supabase
+- Supabase with Authentication
 - Dark, Light and System - Color theme mode
 - SEO Optimized
 - Styled using **Tailwind CSS**
